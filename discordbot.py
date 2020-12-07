@@ -7,10 +7,10 @@ import unicodedata
 bot = commands.Bot(command_prefix='$')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-vividarmy_file = open('./data/vividarmy.json','r')
+vividarmy_file = open('./data/vividarmy.json','r', encoding="utf-8")
 vividarmy_dict = json.load(vividarmy_file)
-topwar_file = open('./data/topwar.json', 'r')
-topwar_dict = open(topwar_file)
+topwar_file    = open('./data/topwar.json', 'r', encoding="utf-8")
+topwar_dict    = json.load(topwar_file)
 
 @bot.event
 async def on_command_error(ctx, error):
