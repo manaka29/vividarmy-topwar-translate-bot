@@ -7,9 +7,9 @@ import unicodedata
 bot = commands.Bot(command_prefix='$')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-vividarmy_file = open('data/vividarmy.json','r')
+vividarmy_file = open('./data/vividarmy.json','r')
 vividarmy = json.load(vividarmy_file)
-topwar_file = open('data/topwar.json', 'r')
+topwar_file = open('./data/topwar.json', 'r')
 topwar = open(topwar_file)
 
 @bot.event
