@@ -31,7 +31,7 @@ async def vividarmy(ctx, *args):
         normalized = unicodedata.normalize('NKFC', arg)
         if normalized not in vividarmy:
             response += '{} : NOT DEFINED\n'.format(normalized)
-        else
+        else:
             response += '{} : {}\n'.format(normalized, vividarmy[normalized])
     await ctx.send(response.rstrip('\n'))
 
