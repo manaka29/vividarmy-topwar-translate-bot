@@ -8,9 +8,9 @@ bot = commands.Bot(command_prefix='$')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 vividarmy_file = open('./data/vividarmy.json','r')
-vividarmy = json.load(vividarmy_file)
+vividarmy_dict = json.load(vividarmy_file)
 topwar_file = open('./data/topwar.json', 'r')
-topwar = open(topwar_file)
+topwar_dict = open(topwar_file)
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -29,10 +29,10 @@ async def vividarmy(ctx, *args):
     response = ''
     for arg in args:
         normalized = unicodedata.normalize('NKFC', arg)
-        if normalized not in vividarmy:
+        if normalized not in vividarmy_dict:
             response += '{} : NOT DEFINED\n'.format(normalized)
         else:
-            response += '{} : {}\n'.format(normalized, vividarmy[normalized])
+            response += '{} : {}\n'.format(normalized, vividarmy_dict[normalized])
     await ctx.send(response.rstrip('\n'))
 
 
