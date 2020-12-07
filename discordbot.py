@@ -28,11 +28,23 @@ async def ping(ctx):
 async def _vividarmy(ctx, *args):
     response = ''
     for arg in args:
-        normalized = unicodedata.normalize('NKFC', arg)
+        normalized = unicodedata.normalize('NFKC', arg)
         if normalized not in vividarmy_dict:
             response += '{} : NOT DEFINED\n'.format(normalized)
         else:
             response += '{} : {}\n'.format(normalized, vividarmy_dict[normalized])
+    await ctx.send(response.rstrip('\n'))
+
+
+@bot.command(name="topwar")
+async def _topwar(ctx, *args):
+    response = ''
+    for arg in args:
+        normalized = unicodedata.normalize('NFKC', arg)
+        if normalized not in topwar_dict:
+            response += '{} : NOT DEFINED\n'.format(normalized)
+        else:
+            response += '{} : {}\n'.format(normalized, topwar_dict[normalized])
     await ctx.send(response.rstrip('\n'))
 
 
