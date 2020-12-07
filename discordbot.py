@@ -24,8 +24,8 @@ async def ping(ctx):
     await ctx.send('pong')
 
 
-@bot.command()
-async def vividarmy(ctx, *args):
+@bot.command(name="vividarmy")
+async def _vividarmy(ctx, *args):
     response = ''
     for arg in args:
         normalized = unicodedata.normalize('NKFC', arg)
