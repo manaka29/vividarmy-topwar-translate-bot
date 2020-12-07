@@ -40,11 +40,12 @@ async def _vividarmy(ctx, *args):
 async def _topwar(ctx, *args):
     response = ''
     for arg in args:
-        normalized = unicodedata.normalize('NFKC', arg.lower())
+        normalized = unicodedata.normalize('NFKC', arg).lower().replace(' ', '-')
         if normalized not in topwar_dict:
-            response += '{} : NOT DEFINED\n'.format(normalized)
+            response += '{} : NOT DEFINED\n'.format(arg)
         else:
-            response += '{} : {}\n'.format(normalized, topwar_dict[normalized])
+            response += '{} : {}\n'.format(arg
+            , topwar_dict[normalized])
     await ctx.send(response.rstrip('\n'))
 
 
