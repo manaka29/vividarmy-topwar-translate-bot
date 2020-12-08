@@ -98,5 +98,15 @@
     "dmg-decrease": "被ダメージ減少",
     "crit-dmg": "会心ダメージ",
     "tenacity": "強靭",
-    "hit": "命中"
+    "hit": "命中",
+    "class": "職業",
+    "basic-potential": "基礎天賦",
+    "combat-elite": "ソルジャー",
+    "grand-marshal": "大元帥",
+    "tactical-master": "戦術マスター",
+    "mechanical-master": "メカニック",
+    "legendary-craftsman": "伝説職人",
+    "great-scientist": "サイエンティスト",
+    "combat-elite-nameplate": "ドッグタグ",
+    "mechanical-gear": "マシンギア"
 }

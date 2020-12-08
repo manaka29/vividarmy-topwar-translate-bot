@@ -101,5 +101,15 @@
     "被ダメージ減少": "DMG Decrease",
     "会心ダメージ": "Crit. DMG",
     "強靭": "Tenacity",
-    "命中": "Hit"
+    "命中": "Hit",
+    "職業": "Class",
+    "基礎天賦": "Basic Potential",
+    "ソルジャー": "Combat Elite",
+    "大元帥": "Grand Marshal",
+    "戦術マスター": "Tactical Master",
+    "メカニック": "Mechanical Master",
+    "伝説職人": "Legendary Craftsman",
+    "サイエンティスト": "Great Scientist",
+    "ドッグタグ": "Combat Elite Nameplate",
+    "マシンギア": "Mechanical Gear"
 }
